@@ -14,4 +14,27 @@ public class Cliente {
         this.email = email;
         this.dataIscrizione = dataIscrizione;
     }
+
+    //Getter per leggere i dati cliente
+
+    public long getCodiceCliente(){
+        return codiceCliente;
+    }
+
+    public String getFullName(){
+        return fullName;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public String getDataIscrizione(){
+        return dataIscrizione;
+    }
+    //Stampo il cliente
+    @Override
+    public String toString(){
+        return "Cliente: " + fullName + "Codice cliente: " + codiceCliente + ". Email cliente: "+ email +" Data di iscrizione " + dataIscrizione;
+    }
 }
