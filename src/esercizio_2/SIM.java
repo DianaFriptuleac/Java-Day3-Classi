@@ -23,19 +23,32 @@ public class SIM {
         return credito;
     }
     //Metodo per aggiungere la chiamata
-    public void addChiamate (String numeroChiamato, int durata){
+    public void addChiamate (String numeroChiamato, double durata){
         if (durata > 0 && numeroChiamato !=null) {
             Chiamata chiamata = new Chiamata(numeroChiamato, durata);
 
             if(ultimeChiamate.size() == 5){
-                ultimeChiamate.remove(chiamata); //cancella chiamata
+                ultimeChiamate.removeFirst(); //cancella chiamata
             }
-            ultimeChiamate.addLast(chiamata);  //aggiungi chiamata
+            ultimeChiamate.add(chiamata);  //aggiungi chiamata
             System.out.println("Il numero da lei chiamato è " + numeroChiamato + "per una durata di " + durata + " minuti.");
         } else{
             System.out.println("Dati della chiamata errati!");
         }
     }
 
+//Mmetodo pe stampare i dati della SIM
+    public void stampaDatiSIM(){
+        System.out.println("Numero di telefono "+ numeroTelefono);
+        System.out.println("Credito " + credito + " euro");
 
+        if(ultimeChiamate.isEmpty()){
+            System.out.println("Non ci sono chiamate effettuate.");
+        } else{
+            System.out.println("La lista delle ultime chiamate: ");
+            for (Chiamata chiamata : ultimeChiamate){
+            System.out.println(chiamata);
+            }
+        }
+    }
 }

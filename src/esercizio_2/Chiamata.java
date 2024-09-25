@@ -2,9 +2,9 @@ package esercizio_2;
 
 public class Chiamata {
     private String numeroChiamato;
-    private int durata;
+    private double durata;
 
-    public Chiamata(String numeroChiamato, int durata){
+    public Chiamata(String numeroChiamato, double durata){
         this.numeroChiamato = numeroChiamato;
         this.durata = durata;
     }
@@ -13,7 +13,7 @@ public class Chiamata {
         return numeroChiamato;
     }
 
-    public int getDurata() {
+    public double getDurata() {
         return durata;
     }
 
