@@ -14,4 +14,23 @@ public class Articolo {
         nrPezzi --;
 
     }
+    //leggo l'articolo
+
+    public int getCodiceArticolo(){
+        return codiceArticolo;
+    }
+    public String getDescrizione(){
+        return descrizione;
+    }
+
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    //Stampo l'articolo
+    @Override
+    public String toString(){
+        return "Articolo: " + descrizione + " con il codice: "+ codiceArticolo+ ". Prezzo: "+ prezzo + " euro." + "Disponibile "+ nrPezzi + " per l'aquisto.";
+    }
+
 }
