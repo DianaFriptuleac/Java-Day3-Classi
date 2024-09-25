@@ -47,6 +47,19 @@ public class Rettangolo {
         System.out.println("L'area del rettangolo è: " + areaRettangolo());
         System.out.println("Il perimetro del rettangolo è " + perimetroRettangolo());
     }
+    //Metodo per stampare l'area e il perimetro di due rettangoli e la loro somma
+    public static void stampaDueRettangoli(Rettangolo ret1, Rettangolo ret2){
+        System.out.println("Il primo rettangolo: ");
+        ret1.stampaRettangolo();
+        System.out.println("\nIl secondo rettangolo: ");
+        ret2.stampaRettangolo();
 
+        double sommaAreaRet = ret1.areaRettangolo() + ret2.areaRettangolo();
+        double sommaPerimetriRet = ret1.perimetroRettangolo() + ret2.perimetroRettangolo();
+
+        System.out.println("Somma delle aree dei due rettangoli: "+ sommaAreaRet);
+        System.out.println("Somma delperimetro dei due rettangoli: "+ sommaPerimetriRet);
+
+    }
 
 }
